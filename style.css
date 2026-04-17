@@ -77,6 +77,8 @@ h6 {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    cursor: ns-resize;
+    touch-action: none;
 }
 
 .slider-container img {
@@ -91,7 +93,7 @@ h6 {
 
 .img-after {
     z-index: 2;
-    clip-path: inset(0 0 0 50%);
+    clip-path: inset(0 0 50% 0);
 }
 
 .img-before {
@@ -99,30 +101,24 @@ h6 {
 }
 
 .slider-input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: ew-resize;
-    z-index: 10;
+    display: none;
 }
 
 .slider-button {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 50%;
-    width: 4px;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 4px;
+    width: 100%;
     background: #fff;
     z-index: 5;
-    transform: translateX(50%);
+    transform: translateY(-50%);
     pointer-events: none;
 }
 
 .slider-button::after {
-    content: '\2194';
+    content: '\2195';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -156,8 +152,8 @@ h6 {
     letter-spacing: 0.5px;
 }
 
-.label-after { right: 20px; }
-.label-before { left: 20px; }
+.label-after { top: 20px; right: 20px; left: auto; bottom: auto; }
+.label-before { bottom: 20px; right: 20px; left: auto; top: auto; }
 
 
 /* Custom image slider styles (RTL Native) */
@@ -169,6 +165,8 @@ h6 {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    cursor: ns-resize;
+    touch-action: none;
 }
 
 .slider-container img {
@@ -183,7 +181,7 @@ h6 {
 
 .img-after {
     z-index: 2;
-    clip-path: inset(0 0 0 50%);
+    clip-path: inset(0 0 50% 0);
 }
 
 .img-before {
@@ -191,30 +189,24 @@ h6 {
 }
 
 .slider-input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: ew-resize;
-    z-index: 10;
+    display: none;
 }
 
 .slider-button {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 50%;
-    width: 4px;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 4px;
+    width: 100%;
     background: #fff;
     z-index: 5;
-    transform: translateX(50%);
+    transform: translateY(-50%);
     pointer-events: none;
 }
 
 .slider-button::after {
-    content: '\2194';
+    content: '\2195';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -248,5 +240,5 @@ h6 {
     letter-spacing: 0.5px;
 }
 
-.label-after { right: 20px; }
-.label-before { left: 20px; }
+.label-after { top: 20px; right: 20px; left: auto; bottom: auto; }
+.label-before { bottom: 20px; right: 20px; left: auto; top: auto; }
