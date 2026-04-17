@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3M NoEman | تصميمات أكاديمية احترافية</title>
+    <title>الرئيسية | 3M Academic Design</title>
     <!-- SEO Meta Tags -->
     <meta name="description"
         content="ارتقِ بمحتواك التعليمي بتصميمات احترافية. نحوّل أفكارك ومناهجك العلمية إلى تصميمات بصرية ملهمة وخالية من التشتت.">
@@ -13,8 +13,8 @@
     <!-- Open Graph Tags (Social Media Preview) -->
     <meta property="og:title" content="3M Academic Design | بيت التصميم الأكاديمي">
     <meta property="og:description" content="ارتقِ بمحتواك التعليمي بتصميمات احترافية. نحوّل أفكارك ومناهجك العلمية إلى قصص بصرية ملهمة.">
-    <meta property="og:image" content="https://github.com/Mohamed-3M-Nouman/3M-academic-design-services/blob/main/logo.png?raw=true">
-    <meta property="og:url" content="https://github.com/Mohamed-3M-Nouman/3M-academic-design-services/">
+    <meta property="og:image" content="https://mohamed-3m-nouman.github.io/3M-academic-design-services/logo.png">
+    <meta property="og:url" content="https://mohamed-3m-nouman.github.io/3M-academic-design-services/">
     <meta property="og:type" content="website">
 
     <!-- Google Fonts -->
@@ -386,15 +386,15 @@
                 </div>
 
                 <div class="flex gap-4 md:gap-6">
-                    <a href="https://www.facebook.com/3mnal"
+                    <a href="https://www.facebook.com/3mnal" target="_blank" rel="noopener noreferrer"
                         class="w-11 h-11 md:w-10 md:h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white transition-standard">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/eng3mno3man/"
+                    <a href="https://www.linkedin.com/in/eng3mno3man/" target="_blank" rel="noopener noreferrer"
                         class="w-11 h-11 md:w-10 md:h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white transition-standard">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://wa.me/+201110119993"
+                    <a href="https://wa.me/+201110119993" target="_blank" rel="noopener noreferrer"
                         class="w-11 h-11 md:w-10 md:h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white transition-standard">
                         <i class="fab fa-whatsapp"></i>
                     </a>
@@ -403,49 +403,14 @@
 
             <div class="text-center border-t border-gray-100 pt-8">
                 <p class="text-xs md:text-sm text-textLight">
-                    &copy; <span id="current-year"></span> 3M NoEman تصميمات أكاديمية. جميع الحقوق محفوظة.
+                    &copy; <span id="current-year"></span> 3M Academic Design - بيت التصميم الأكاديمي. جميع الحقوق محفوظة.
                 </p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
-    <script>
-        // Set current year
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Mobile menu toggle
-        const btn = document.getElementById('mobile-menu-button');
-        const menu = document.getElementById('mobile-menu');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        const mobileLinks = menu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
-
-        // Navbar blur effect on scroll
-        const navbar = document.querySelector('nav');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                navbar.classList.add('shadow-md');
-                navbar.classList.remove('shadow-sm');
-                navbar.classList.add('bg-white/95');
-                navbar.classList.remove('bg-white/90');
-            } else {
-                navbar.classList.remove('shadow-md');
-                navbar.classList.add('shadow-sm');
-                navbar.classList.add('bg-white/90');
-                navbar.classList.remove('bg-white/95');
-            }
-        });
-    </script>
+    <script src="./main.js"></script>
 </body>
 
 </html>
