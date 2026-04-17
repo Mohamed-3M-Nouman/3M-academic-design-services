@@ -35,19 +35,16 @@ if(navbar) {
     });
 }
 
-// Before/After Image Slider Logic (RTL Native Optimized)
+// Before/After Image Slider Logic (RTL optimized inside LTR container)
 const compareSlider = document.getElementById('compareSlider');
 const afterImage = document.getElementById('afterImage');
 const sliderButton = document.getElementById('sliderButton');
 
 if (compareSlider && afterImage && sliderButton) {
     function updateSliderProgress(val) {
-        // Native RTL range input:
-        // value 0 is on the physical RIGHT. value 100 is on the physical LEFT.
-        // We want 'After' image to be hidden when val=0, and fully revealed when val=100.
-        const clipLeft = 100 - val;
-        afterImage.style.clipPath = `inset(0 0 0 ${clipLeft}%)`;
-        sliderButton.style.right = `${val}%`;
+        const clipRight = 100 - val;
+        afterImage.style.clipPath = `inset(0 ${clipRight}% 0 0)`;
+        sliderButton.style.left = `${val}%`;
     }
 
     // Initialize display

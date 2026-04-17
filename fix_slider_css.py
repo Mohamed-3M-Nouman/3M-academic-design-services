@@ -1,73 +1,11 @@
-body {
-    font-family: "Alexandria", sans-serif;
-    color: #212529;
-    background-color: #F5F7FA;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
+import os
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Cairo", sans-serif;
-    font-weight: 700;
-    color: #212529;
-}
+path = r"c:\Users\anew3\Desktop\project\style.css"
 
-.transition-standard {
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 300ms;
-}
+with open(path, "r", encoding="utf-8") as f:
+    lines = f.readlines()
 
-.text-balance {
-    text-wrap: balance;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #F5F7FA;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #0047AB;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #003380;
-}
-
-/* Hero shape divider */
-.custom-shape-divider-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 50px;
-    transform: rotateY(180deg);
-}
-
-.custom-shape-divider-bottom .shape-fill {
-    fill: #F5F7FA;
-}
-
+horizontal_slider_css = """
 /* Custom image slider styles */
 .slider-container {
     position: relative;
@@ -122,7 +60,7 @@ h6 {
 }
 
 .slider-button::after {
-    content: '\2194';
+    content: '\\2194';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -158,3 +96,13 @@ h6 {
 
 .label-after { left: 20px; }
 .label-before { right: 20px; }
+"""
+
+# Keep only lines 0 to 69 from the old CSS.
+new_lines = lines[:69]
+new_css = "".join(new_lines) + horizontal_slider_css
+
+with open(path, "w", encoding="utf-8") as f:
+    f.write(new_css)
+
+print("CSS Fixed completely")
