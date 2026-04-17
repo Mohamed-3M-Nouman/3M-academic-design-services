@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3M NoEman | تصميمات أكاديمية احترافية</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="ارتقِ بمحتواك التعليمي بتصميمات احترافية. نحوّل أفكارك ومناهجك العلمية إلى تصميمات بصرية ملهمة وخالية من التشتت.">
+    <meta name="keywords" content="تصميم عروض تقديمية, إنفوجرافيك تعليمي, هوية المعلم, 3M NoEman">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600&family=Cairo:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0047AB',
+                        primaryHover: '#003380',
+                        accent: '#FFC107',
+                        accentHover: '#E5AD06',
+                        bgLight: '#F5F7FA',
+                        textDark: '#212529',
+                        textLight: '#6c757d',
+                    },
+                    fontFamily: {
+                        heading: ['Cairo', 'sans-serif'],
+                        body: ['Alexandria', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'standard': '12px',
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01)',
+                        'hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="selection:bg-primary selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav
+        class="bg-white/90 backdrop-blur-md fixed w-full z-50 top-0 border-b border-gray-100 shadow-sm transition-standard">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="./logo.png" alt="3M NoEman Logo - تصميمات أكاديمية" class="h-10 w-auto md:h-12" />
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 space-x-reverse items-center">
+                    <a href="#"
+                        class="text-textDark font-medium hover:text-primary transition-standard text-sm lg:text-base">الرئيسية</a>
+                    <a href="#services"
+                        class="text-textDark font-medium hover:text-primary transition-standard text-sm lg:text-base">خدماتنا</a>
+                    <a href="#why-us"
+                        class="text-textDark font-medium hover:text-primary transition-standard text-sm lg:text-base">لماذا
+                        نحن؟</a>
+                    <a href="#contact"
+                        class="px-5 py-2.5 rounded-standard bg-bgLight text-primary font-semibold hover:bg-primary border border-transparent hover:text-white transition-standard text-sm lg:text-base shadow-sm hover:shadow-soft min-h-[44px] min-w-[44px] flex items-center justify-center">تواصل
+                        معنا</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button"
+                        class="text-textDark hover:text-primary focus:outline-none transition-standard p-3 min-h-[44px] min-w-[44px] flex items-center justify-center">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-xl absolute w-full left-0 z-40">
+            <div class="px-4 pt-4 pb-6 space-y-2 sm:px-3 flex flex-col gap-2">
+                <a href="#"
+                    class="block px-4 py-4 rounded-standard text-base font-medium text-textDark hover:text-primary hover:bg-bgLight transition-standard min-h-[44px]">الرئيسية</a>
+                <a href="#services"
+                    class="block px-4 py-4 rounded-standard text-base font-medium text-textDark hover:text-primary hover:bg-bgLight transition-standard min-h-[44px]">خدماتنا</a>
+                <a href="#why-us"
+                    class="block px-4 py-4 rounded-standard text-base font-medium text-textDark hover:text-primary hover:bg-bgLight transition-standard min-h-[44px]">لماذا
+                    نحن؟</a>
+                <a href="#contact"
+                    class="block w-full text-center mt-2 px-4 py-4 rounded-standard text-base font-semibold border-2 border-primary text-primary hover:bg-primary hover:text-white transition-standard min-h-[44px]">تواصل
+                    معنا</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-28 pb-16 md:pt-32 md:pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-white">
+        <!-- Abstract Background Elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-72 h-72 rounded-full bg-primary/5 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 w-96 h-96 rounded-full bg-accent/10 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-primary text-sm font-medium mb-8 animate-fade-in-up">
+                    <i class="fas fa-graduation-cap"></i> شريكك في التميز الأكاديمي
+                </div>
+                <h1
+                    class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-[1.6] md:leading-[1.8] text-balance">
+                    ارتقِ بمحتواك التعليمي <br class="hidden sm:block" />
+                    <span class="inline-block mt-2 sm:mt-4 lg:mt-6 pb-2 md:pb-4 text-transparent bg-clip-text bg-gradient-to-l from-primary to-blue-400">بتصميمات
+                        احترافية</span>
+                </h1>
+
+                <p
+                    class="mt-4 text-base sm:text-lg md:text-xl text-textLight leading-relaxed mb-10 text-balance max-w-3xl mx-auto">
+                    نحوّل أفكارك ومناهجك العلمية إلى تصميمات بصرية ملهمة وخالية من التشتت، مصممة خصيصاً للمعلمين،
+                    الأكاديميين، وصناع المحتوى التعليمي.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#services"
+                        class="inline-flex justify-center items-center gap-2 px-8 py-4 border border-transparent text-base font-bold rounded-standard shadow-soft text-white bg-primary hover:bg-primaryHover hover:shadow-hover hover:-translate-y-1 transition-standard w-full sm:w-auto min-h-[44px]">
+                        اطلب تصميمك الآن
+                        <i class="fas fa-arrow-left text-sm"></i>
+                    </a>
+                    <a href="#why-us"
+                        class="inline-flex justify-center items-center gap-2 px-8 py-4 border-2 border-gray-200 text-base font-bold rounded-standard text-textDark bg-white hover:border-primary hover:text-primary transition-standard w-full sm:w-auto min-h-[44px]">
+                        تعرف علينا أكثر
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Wave Divider -->
+        <div class="custom-shape-divider-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-12 md:py-20 bg-bgLight relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-sm md:text-base text-primary font-bold tracking-wider uppercase mb-2">ماذا نقدم؟</h2>
+                <h3 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-balance">خدماتنا الأكاديمية</h3>
+                <div class="w-16 md:w-24 h-1 bg-accent mx-auto mt-4 md:mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 xl:gap-10">
+                <!-- Service 1 -->
+                <div
+                    class="bg-white rounded-standard p-6 md:p-8 shadow-sm hover:shadow-hover border border-gray-100 transition-standard group relative overflow-hidden flex flex-col h-full">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-10 -mt-10 transition-standard group-hover:scale-110">
+                    </div>
+
+                    <div
+                        class="w-14 h-14 md:w-16 md:h-16 bg-blue-50 text-primary rounded-2xl flex items-center justify-center text-2xl md:text-3xl mb-5 md:mb-6 shadow-sm group-hover:bg-primary group-hover:text-white transition-standard relative z-10">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+
+                    <h4 class="text-lg md:text-xl font-bold mb-3 relative z-10">تصميم العروض التقديمية (PowerPoint)</h4>
+                    <p class="text-textLight leading-relaxed mb-6 flex-grow relative z-10 text-sm">
+                        عروض تفاعلية وجذابة تراعي أسس التصميم التعليمي لتوصيل المعلومات بسلاسة واحترافية.
+                    </p>
+
+                    <a href="presentation.html"
+                        class="w-full py-3 px-4 bg-gray-50 text-textDark font-semibold rounded-standard group-hover:bg-primary group-hover:text-white border border-gray-200 group-hover:border-primary transition-standard relative z-10 text-sm flex justify-center items-center gap-2 mt-auto min-h-[44px]">
+                        التفاصيل والنماذج
+                        <i class="fas fa-chevron-left text-xs opacity-70"></i>
+                    </a>
+                </div>
+
+                <!-- Service 2 -->
+                <div
+                    class="bg-white rounded-standard p-6 md:p-8 shadow-sm hover:shadow-hover border border-gray-100 transition-standard group relative overflow-hidden flex flex-col h-full">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-bl-full -mr-10 -mt-10 transition-standard group-hover:scale-110">
+                    </div>
+
+                    <div
+                        class="w-14 h-14 md:w-16 md:h-16 bg-yellow-50 text-accent rounded-2xl flex items-center justify-center text-2xl md:text-3xl mb-5 md:mb-6 shadow-sm group-hover:bg-accent group-hover:text-white transition-standard relative z-10">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+
+                    <h4 class="text-lg md:text-xl font-bold mb-3 relative z-10">الإنفوجرافيك التعليمي</h4>
+                    <p class="text-textLight leading-relaxed mb-6 flex-grow relative z-10 text-sm">
+                        تلخيص البيانات المعقدة في رسوم بصرية مبسطة تعزز الفهم والاستيعاب السريع لدى الطلاب.
+                    </p>
+
+                    <a href="infographic.html"
+                        class="w-full py-3 px-4 bg-gray-50 text-textDark font-semibold rounded-standard group-hover:bg-accent group-hover:text-white border border-gray-200 group-hover:border-accent transition-standard relative z-10 text-sm flex justify-center items-center gap-2 mt-auto min-h-[44px]">
+                        التفاصيل والنماذج
+                        <i class="fas fa-chevron-left text-xs opacity-70"></i>
+                    </a>
+                </div>
+
+                <!-- Service 3 -->
+                <div
+                    class="bg-white rounded-standard p-6 md:p-8 shadow-sm hover:shadow-hover border border-gray-100 transition-standard group relative overflow-hidden flex flex-col h-full">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-green-50 rounded-bl-full -mr-10 -mt-10 transition-standard group-hover:scale-110">
+                    </div>
+
+                    <div
+                        class="w-14 h-14 md:w-16 md:h-16 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mb-5 md:mb-6 shadow-sm group-hover:bg-green-600 group-hover:text-white transition-standard relative z-10">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+
+                    <h4 class="text-lg md:text-xl font-bold mb-3 relative z-10">الصور التوضيحية العلمية</h4>
+                    <p class="text-textLight leading-relaxed mb-6 flex-grow relative z-10 text-sm">
+                        رسوم دقيقة للتجارب والمفاهيم العلمية بطابع أكاديمي يخدم المناهج المدرسية والجامعية.
+                    </p>
+
+                    <a href="illustrations.html"
+                        class="w-full py-3 px-4 bg-gray-50 text-textDark font-semibold rounded-standard group-hover:bg-green-600 group-hover:text-white border border-gray-200 group-hover:border-green-600 transition-standard relative z-10 text-sm flex justify-center items-center gap-2 mt-auto min-h-[44px]">
+                        التفاصيل والنماذج
+                        <i class="fas fa-chevron-left text-xs opacity-70"></i>
+                    </a>
+                </div>
+
+                <!-- Service 4 -->
+                <div
+                    class="bg-white rounded-standard p-6 md:p-8 shadow-sm hover:shadow-hover border border-gray-100 transition-standard group relative overflow-hidden flex flex-col h-full lg:col-start-2 lg:col-span-1 md:col-span-1">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-purple-50 rounded-bl-full -mr-10 -mt-10 transition-standard group-hover:scale-110">
+                    </div>
+
+                    <div
+                        class="w-14 h-14 md:w-16 md:h-16 bg-purple-50 text-purple-600 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mb-5 md:mb-6 shadow-sm group-hover:bg-purple-600 group-hover:text-white transition-standard relative z-10">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+
+                    <h4 class="text-lg md:text-xl font-bold mb-3 relative z-10">تصميم البنرات والبوسترات</h4>
+                    <p class="text-textLight leading-relaxed mb-6 flex-grow relative z-10 text-sm">
+                        تصاميم مخصصة للمؤتمرات، الفعاليات المدرسية، والمجلات الحائطية بجودة طباعة عالية.
+                    </p>
+
+                    <a href="banners.html"
+                        class="w-full py-3 px-4 bg-gray-50 text-textDark font-semibold rounded-standard group-hover:bg-purple-600 group-hover:text-white border border-gray-200 group-hover:border-purple-600 transition-standard relative z-10 text-sm flex justify-center items-center gap-2 mt-auto min-h-[44px]">
+                        التفاصيل والنماذج
+                        <i class="fas fa-chevron-left text-xs opacity-70"></i>
+                    </a>
+                </div>
+
+                <!-- Service 5 -->
+                <div
+                    class="bg-white rounded-standard p-6 md:p-8 shadow-sm hover:shadow-hover border border-gray-100 transition-standard group relative overflow-hidden flex flex-col h-full lg:col-start-3 lg:col-span-1 md:col-span-2 md:w-1/2 md:mx-auto lg:w-full">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-rose-50 rounded-bl-full -mr-10 -mt-10 transition-standard group-hover:scale-110">
+                    </div>
+
+                    <div
+                        class="w-14 h-14 md:w-16 md:h-16 bg-rose-50 text-rose-600 rounded-2xl flex items-center justify-center text-2xl md:text-3xl mb-5 md:mb-6 shadow-sm group-hover:bg-rose-600 group-hover:text-white transition-standard relative z-10">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+
+                    <h4 class="text-lg md:text-xl font-bold mb-3 relative z-10">هوية المعلم (كروت شخصية)</h4>
+                    <p class="text-textLight leading-relaxed mb-6 flex-grow relative z-10 text-sm">
+                        بناء هوية بصرية تعكس احترافيتك تشمل بطاقات العمل، التوقيع الجاهز لرسائل البريد والمزيد.
+                    </p>
+
+                    <a href="identity.html"
+                        class="w-full py-3 px-4 bg-gray-50 text-textDark font-semibold rounded-standard group-hover:bg-rose-600 group-hover:text-white border border-gray-200 group-hover:border-rose-600 transition-standard relative z-10 text-sm flex justify-center items-center gap-2 mt-auto min-h-[44px]">
+                        التفاصيل والنماذج
+                        <i class="fas fa-chevron-left text-xs opacity-70"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="py-12 md:py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-primary rounded-2xl overflow-hidden shadow-hover relative">
+                <!-- Background Pattern -->
+                <div class="absolute inset-0 opacity-10">
+                    <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="pattern-boxes" x="0" y="0" width="40" height="40"
+                                patternUnits="userSpaceOnUse">
+                                <path fill="currentColor" d="M0 0h20v20H0zM20 20h20v20H20z"></path>
+                            </pattern>
+                        </defs>
+                        <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern-boxes)"></rect>
+                    </svg>
+                </div>
+
+                <div class="absolute right-0 top-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
+                <div class="absolute left-0 bottom-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -ml-20 -mb-20"></div>
+
+                <div class="relative z-10 flex flex-col md:flex-row items-center p-8 md:p-10 lg:p-16 gap-8 lg:gap-12">
+                    <div class="md:w-2/3 text-white">
+                        <h2
+                            class="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-5 lg:mb-6 inline-block relative text-white">
+                            لماذا تختارنا؟
+                            <div class="absolute -bottom-2 right-0 w-1/2 h-1 bg-accent rounded-full"></div>
+                        </h2>
+
+                        <div class="relative pl-0 lg:pl-10">
+                            <i
+                                class="fas fa-quote-right absolute -right-3 -top-3 lg:-right-4 lg:-top-4 text-3xl lg:text-4xl text-white/20"></i>
+                            <p class="text-lg sm:text-xl md:text-2xl leading-relaxed text-blue-50 font-medium">
+                                "نحن لا نصمم فقط، بل نهندس المعلومة. نحن نتحدث لغة المناهج والأرقام، وندرك تماماً كيف
+                                نحول الأفكار المجردة والمعقدة إلى محتوى مرئي يسهل على الطالب استيعابه بدقة أكاديمية
+                                صارمة."
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="md:w-1/3 w-full flex justify-center md:justify-end">
+                        <div
+                            class="w-full max-w-sm aspect-square bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 p-6 flex flex-col justify-center items-center text-center gap-5 lg:gap-6 shadow-xl">
+                            <div
+                                class="w-16 h-16 lg:w-20 lg:h-20 bg-accent rounded-full flex items-center justify-center text-white text-2xl lg:text-3xl shadow-lg">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg lg:text-xl mb-1 lg:mb-2">دقة أكاديمية</h4>
+                                <p class="text-blue-100 text-xs lg:text-sm">محتوى خالي من الأخطاء التشتيتية يخدم الهدف
+                                    التعليمي.
+                                </p>
+                            </div>
+                            <div class="w-full h-px bg-white/20"></div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg lg:text-xl mb-1 lg:mb-2">تصميم عصري</h4>
+                                <p class="text-blue-100 text-xs lg:text-sm">استخدام أحدث تقنيات التصميم المرئي الجذاب.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action (WhatsApp) -->
+    <section id="contact" class="py-12 md:py-16 bg-bgLight">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h3 class="text-xl md:text-2xl font-bold mb-4 md:mb-6">هل أنت مستعد لتطوير محتواك الأكاديمي؟</h3>
+            <p class="text-sm md:text-base text-textLight mb-8">يسعدنا تلقي استفساراتكم ومناقشة أفكاركم للوصول إلى أفضل
+                تصميم ممكن.</p>
+
+            <a href="https://wa.me/+201110119993" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-3 md:gap-4 bg-green-500 text-white px-6 md:px-8 py-4 rounded-full font-bold text-base md:text-lg hover:bg-green-600 hover:-translate-y-1 hover:shadow-lg transition-standard w-full sm:w-auto min-h-[44px]">
+                <i class="fab fa-whatsapp text-xl md:text-2xl"></i>
+                تواصل معنا مباشرة عبر الواتساب
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 pt-12 md:pt-16 pb-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-6 mb-10 md:mb-12">
+                <div class="flex items-center">
+                    <img src="./logo.png" alt="3M NoEman Logo - تصميمات أكاديمية" class="h-10 w-auto md:h-12" />
+                </div>
+
+                <div class="flex gap-4 md:gap-6">
+                    <a href="https://www.facebook.com/3mnal"
+                        class="w-11 h-11 md:w-10 md:h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white transition-standard">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/eng3mno3man/"
+                        class="w-11 h-11 md:w-10 md:h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white transition-standard">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/+201110119993"
+                        class="w-11 h-11 md:w-10 md:h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white transition-standard">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center border-t border-gray-100 pt-8">
+                <p class="text-xs md:text-sm text-textLight">
+                    &copy; <span id="current-year"></span> 3M NoEman تصميمات أكاديمية. جميع الحقوق محفوظة.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar blur effect on scroll
+        const navbar = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('shadow-sm');
+                navbar.classList.add('bg-white/95');
+                navbar.classList.remove('bg-white/90');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('shadow-sm');
+                navbar.classList.add('bg-white/90');
+                navbar.classList.remove('bg-white/95');
+            }
+        });
+    </script>
+</body>
+
+</html>

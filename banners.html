@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تصميم البنرات والبوسترات | 3M NoEman</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="تصاميم مخصصة للمؤتمرات العلمية، الفعاليات المدرسية، والمجلات الحائطية بجودة طباعة عالية تلفت الانتباه وتبرز رسالتك.">
+    <meta name="keywords" content="تصميم بوسترات, بنرات علمية, مجلات حائطية, بوستر أكاديمي, 3M NoEman, طباعة عالية الجودة">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600&family=Cairo:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0047AB',
+                        primaryHover: '#003380',
+                        accent: '#FFC107',
+                        accentHover: '#E5AD06',
+                        bgLight: '#F5F7FA',
+                        textDark: '#212529',
+                        textLight: '#6c757d',
+                    },
+                    fontFamily: {
+                        heading: ['Cairo', 'sans-serif'],
+                        body: ['Alexandria', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        'standard': '12px',
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01)',
+                        'hover': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom image slider styles */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .slider-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+
+        .img-after {
+            z-index: 2;
+            clip-path: inset(0 50% 0 0); /* starts with 50% revealed */
+        }
+
+        .img-before {
+            z-index: 1;
+        }
+
+        .slider-input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: ew-resize;
+            z-index: 10;
+        }
+
+        .slider-button {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: #fff;
+            z-index: 5;
+            transform: translateX(-50%);
+            pointer-events: none;
+        }
+
+        .slider-button::after {
+            content: '\2194'; /* Left/right arrow */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 44px;
+            height: 44px;
+            background: #FFC107;
+            color: #212529;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            border: 3px solid #fff;
+        }
+
+        .slider-label {
+            position: absolute;
+            top: 20px;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-family: 'Cairo', sans-serif;
+            font-weight: 700;
+            backdrop-filter: blur(4px);
+            z-index: 4;
+            letter-spacing: 0.5px;
+        }
+
+        .label-after { left: 20px; }
+        .label-before { right: 20px; }
+    </style>
+</head>
+
+<body class="selection:bg-primary selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navbar -->
+    <nav
+        class="bg-white/90 backdrop-blur-md fixed w-full z-50 top-0 border-b border-gray-100 shadow-sm transition-standard">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex-shrink-0 flex items-center cursor-pointer">
+                    <img src="./logo.png" alt="3M NoEman Logo - تصميمات أكاديمية" class="h-10 w-auto md:h-12" />
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 space-x-reverse items-center">
+                    <a href="index.html"
+                        class="text-textDark font-medium hover:text-primary transition-standard text-sm lg:text-base">الرئيسية</a>
+                    <a href="index.html#services"
+                        class="text-textDark font-medium hover:text-primary transition-standard text-sm lg:text-base">خدماتنا</a>
+                    <a href="index.html#why-us"
+                        class="text-textDark font-medium hover:text-primary transition-standard text-sm lg:text-base">لماذا
+                        نحن؟</a>
+                    <a href="#contact"
+                        class="px-5 py-2.5 rounded-standard bg-bgLight text-primary font-semibold hover:bg-primary border border-transparent hover:text-white transition-standard text-sm lg:text-base shadow-sm hover:shadow-soft min-h-[44px] min-w-[44px] flex items-center justify-center">تواصل
+                        معنا</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button"
+                        class="text-textDark hover:text-primary focus:outline-none transition-standard p-3 min-h-[44px] min-w-[44px] flex items-center justify-center">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-xl absolute w-full left-0 z-40">
+            <div class="px-4 pt-4 pb-6 space-y-2 sm:px-3 flex flex-col gap-2">
+                <a href="index.html"
+                    class="block px-4 py-4 rounded-standard text-base font-medium text-textDark hover:text-primary hover:bg-bgLight transition-standard min-h-[44px]">الرئيسية</a>
+                <a href="index.html#services"
+                    class="block px-4 py-4 rounded-standard text-base font-medium text-textDark hover:text-primary hover:bg-bgLight transition-standard min-h-[44px]">خدماتنا</a>
+                <a href="index.html#why-us"
+                    class="block px-4 py-4 rounded-standard text-base font-medium text-textDark hover:text-primary hover:bg-bgLight transition-standard min-h-[44px]">لماذا
+                    نحن؟</a>
+                <a href="#contact"
+                    class="block w-full text-center mt-2 px-4 py-4 rounded-standard text-base font-semibold border-2 border-primary text-primary hover:bg-primary hover:text-white transition-standard min-h-[44px]">تواصل
+                    معنا</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Hero & Slider Section -->
+    <section class="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden bg-white">
+        <!-- Abstract Background Elements -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-72 h-72 rounded-full bg-primary/5 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 w-96 h-96 rounded-full bg-accent/10 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-primary text-sm font-medium mb-6 animate-fade-in-up">
+                    <i class="fas fa-print"></i> جاهز للطباعة
+                </div>
+
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
+                    تصميم البنرات والبوسترات
+                </h1>
+
+                <p class="text-base md:text-xl text-textLight leading-relaxed max-w-3xl mx-auto text-balance">
+                    تصاميم مخصصة للمؤتمرات العلمية، الفعاليات المدرسية، والمجلات الحائطية بجودة طباعة عالية تلفت الانتباه وتبرز رسالتك.
+                </p>
+            </div>
+
+            <!-- Custom Before/After Slider -->
+            <div class="max-w-5xl mx-auto mb-8">
+                <div dir="ltr" class="slider-container group">
+                    <div class="slider-label label-before">بوستر تقليدي مزدحم</div>
+                    <div class="slider-label label-after">بوستر أكاديمي احترافي</div>
+                    
+                    <!-- Before: Messy board placeholder -->
+                    <img src="https://images.unsplash.com/photo-1544473859-9f7d983c2678?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="لوحة حائطية أو بوستر تقليدي ومزدحم" class="img-before opacity-80 mix-blend-multiply">
+                    
+                    <!-- After: Clean Poster/Banner at Conference Placeholder -->
+                    <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="بوستر أكاديمي احترافي وجذاب ومنظم" class="img-after" id="afterImage">
+                    
+                    <input type="range" min="0" max="100" value="50" class="slider-input" id="compareSlider" aria-label="Compare Before and After">
+                    <div class="slider-button" id="sliderButton"></div>
+                </div>
+                <p class="text-center text-sm text-textLight mt-4"><i class="fas fa-arrows-alt-h mx-2"></i> اسحب المؤشر للمقارنة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / Benefits Grid -->
+    <section class="py-16 md:py-20 bg-bgLight">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-2xl md:text-3xl font-extrabold text-balance">القيمة التي نقدمها لك</h3>
+                <div class="w-16 md:w-24 h-1 bg-accent mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+                <div class="bg-white p-8 rounded-standard shadow-sm hover:shadow-hover transition-standard border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-blue-50 text-primary rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">جودة طباعة فائقة</h4>
+                    <p class="text-textLight text-sm leading-relaxed">
+                        تصميمات معدة للطباعة بمقاسات دقيقة بنظام ألوان (CMYK)، وألوان زاهية لا تتغير لضمان ظهور البوستر بأبهى صورة.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-standard shadow-sm hover:shadow-hover transition-standard border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-yellow-50 text-accent rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">جذب الانتباه السريع</h4>
+                    <p class="text-textLight text-sm leading-relaxed">
+                        توزيع هندسي احترافي للعناصر البصرية لجذب عين القارئ من مسافة بعيدة وإيصال الرسالة فوراً وسط المعارض والمؤتمرات المزدحمة.
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-standard shadow-sm hover:shadow-hover transition-standard border border-gray-100 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-green-50 text-green-600 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">تعدد الاستخدامات</h4>
+                    <p class="text-textLight text-sm leading-relaxed">
+                        مثالية لجميع الاستخدامات: تقديم الأوراق البحثية والمؤتمرات الجامعية، المعارض العلمية، والأنشطة واللوحات المدرسية المتميزة.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h3 class="text-2xl md:text-3xl font-extrabold mb-4">نماذج من أعمالنا</h3>
+                    <p class="text-textLight">تصفح بعض تصاميم البوسترات والمطبوعات الأكاديمية التي أعددناها سابقاً.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery items mapped logically to layout -->
+                <div class="rounded-standard overflow-hidden shadow-sm hover:shadow-hover transition-standard group relative bg-gray-100 aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="تصميم بوستر 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white font-bold text-lg">بوسترات الأبحاث الجامعية</span>
+                    </div>
+                </div>
+                
+                <div class="rounded-standard overflow-hidden shadow-sm hover:shadow-hover transition-standard group relative bg-gray-100 aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="تصميم بوستر 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white font-bold text-lg">لوحات المؤتمرات الطبية</span>
+                    </div>
+                </div>
+
+                <div class="rounded-standard overflow-hidden shadow-sm hover:shadow-hover transition-standard group relative bg-gray-100 aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1561089489-f13d5e730d72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="تصميم بوستر 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white font-bold text-lg">مجلات حائطية مدرسية</span>
+                    </div>
+                </div>
+
+                <div class="rounded-standard overflow-hidden shadow-sm hover:shadow-hover transition-standard group relative bg-gray-100 aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="تصميم بوستر 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white font-bold text-lg">تصميم الرول أب الترويجي</span>
+                    </div>
+                </div>
+                
+                <div class="rounded-standard overflow-hidden shadow-sm hover:shadow-hover transition-standard group relative bg-gray-100 aspect-[4/3] md:col-span-2 lg:col-span-1">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="تصميم بوستر 5" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white font-bold text-lg">بنرات المعارض المدرسية</span>
+                    </div>
+                </div>
+
+                <div class="rounded-standard overflow-hidden shadow-sm hover:shadow-hover transition-standard group relative bg-gray-100 aspect-[4/3] md:col-span-2 lg:col-span-1 hidden lg:block">
+                    <img src="https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="تصميم بوستر 6" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <span class="text-white font-bold text-lg">لوحات الترحيب والفعاليات</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-16 md:py-24 bg-primary relative overflow-hidden">
+        <!-- Abstract Patterns for CTA -->
+        <div class="absolute right-0 top-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
+        <div class="absolute left-0 bottom-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -ml-20 -mb-20"></div>
+
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <h3 class="text-2xl md:text-4xl font-bold mb-6 text-white text-balance">ابرز ورقتك البحثية باحترافية</h3>
+            <p class="text-blue-100 mb-10 text-lg">احصل على تصميم بوستر أو بنر بأعلى جودة جاهز للطباعة مباشرة، يضمن لك لفت انتباه الحضور وتوصيل فكرتك بوضوح.</p>
+
+            <a href="https://wa.me/+201110119993?text=أهلاً، مهتم بمعرفة تفاصيل وأسعار خدمة تصميم البنرات والبوسترات." target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center justify-center gap-3 md:gap-4 bg-green-500 text-white px-8 md:px-10 py-5 rounded-full font-bold text-lg hover:bg-green-600 hover:-translate-y-1 hover:shadow-xl transition-standard w-full sm:w-auto min-h-[44px]">
+                <i class="fab fa-whatsapp text-3xl"></i>
+                اطلب تصميم البوستر الآن
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-100 pt-12 md:pt-16 pb-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-6 mb-10 md:mb-12">
+                <a href="index.html" class="flex items-center">
+                    <img src="./logo.png" alt="3M NoEman Logo - تصميمات أكاديمية" class="h-10 w-auto md:h-12" />
+                </a>
+
+                <div class="flex gap-4 md:gap-6">
+                    <a href="#"
+                        class="w-11 h-11 md:w-10 md:h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white transition-standard">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#"
+                        class="w-11 h-11 md:w-10 md:h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white transition-standard">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#"
+                        class="w-11 h-11 md:w-10 md:h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white transition-standard">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="text-center border-t border-gray-100 pt-8">
+                <p class="text-xs md:text-sm text-textLight">
+                    &copy; <span id="current-year"></span> 3M NoEman تصميمات أكاديمية. جميع الحقوق محفوظة.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar blur
+        const navbar = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md', 'bg-white/95');
+                navbar.classList.remove('shadow-sm', 'bg-white/90');
+            } else {
+                navbar.classList.remove('shadow-md', 'bg-white/95');
+                navbar.classList.add('shadow-sm', 'bg-white/90');
+            }
+        });
+
+        // Before/After Image Slider Logic (RTL optimized inside LTR container)
+        const compareSlider = document.getElementById('compareSlider');
+        const afterImage = document.getElementById('afterImage');
+        const sliderButton = document.getElementById('sliderButton');
+
+        function updateSliderProgress(val) {
+            const clipRight = 100 - val;
+            afterImage.style.clipPath = `inset(0 ${clipRight}% 0 0)`;
+            sliderButton.style.left = `${val}%`;
+        }
+
+        // Initialize display
+        updateSliderProgress(compareSlider.value);
+
+        // Update on user drag
+        compareSlider.addEventListener('input', (e) => {
+            updateSliderProgress(e.target.value);
+        });
+    </script>
+</body>
+
+</html>
