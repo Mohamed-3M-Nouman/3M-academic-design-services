@@ -102,15 +102,19 @@ if (imageModal && modalImage && closeModal) {
 
     // Attach click events to gallery items
     galleryItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const src = item.getAttribute('data-img-src');
-            const caption = item.getAttribute('data-caption');
+        item.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevents iOS hover bug
+            const src = this.getAttribute('data-img-src');
+            const caption = this.getAttribute('data-caption');
             if(src) openModal(src, caption);
         });
     });
 
     // Close on button click
-    closeModal.addEventListener('click', hideModal);
+    closeModal.addEventListener('click', (e) => {
+        e.preventDefault();
+        hideModal();
+    });
 
     // Close on click outside the image
     imageModal.addEventListener('click', (e) => {
