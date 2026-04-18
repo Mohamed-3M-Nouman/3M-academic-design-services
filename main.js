@@ -64,7 +64,7 @@ const closeModal = document.getElementById('closeModal');
 const galleryItems = document.querySelectorAll('.gallery-item');
 
 if (imageModal && modalImage && closeModal) {
-    const openModal = (src, caption) => {
+    window.openImageModal = (src, caption) => {
         modalImage.src = src;
         modalCaption.textContent = caption;
         
@@ -84,7 +84,7 @@ if (imageModal && modalImage && closeModal) {
         document.body.style.overflow = 'hidden';
     };
 
-    const hideModal = () => {
+    window.hideImageModal = () => {
         // Fade out
         imageModal.classList.remove('opacity-100', 'pointer-events-auto');
         imageModal.classList.add('opacity-0', 'pointer-events-none');
@@ -100,34 +100,24 @@ if (imageModal && modalImage && closeModal) {
         }, 300);
     };
 
-    // Attach click events to gallery items
-    galleryItems.forEach(item => {
-        item.addEventListener('click', function(e) {
-            e.preventDefault(); // Prevents iOS hover bug
-            const src = this.getAttribute('data-img-src');
-            const caption = this.getAttribute('data-caption');
-            if(src) openModal(src, caption);
-        });
-    });
-
     // Close on button click
     closeModal.addEventListener('click', (e) => {
         e.preventDefault();
-        hideModal();
+        window.hideImageModal();
     });
 
     // Close on click outside the image
     imageModal.addEventListener('click', (e) => {
         // If clicking strictly on the background/overlay, not the image
         if (e.target === imageModal || e.target.parentElement === imageModal && e.target !== modalImage) {
-            hideModal();
+            window.hideImageModal();
         }
     });
 
     // Close on Escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && !imageModal.classList.contains('hidden')) {
-            hideModal();
+            window.hideImageModal();
         }
     });
 }
