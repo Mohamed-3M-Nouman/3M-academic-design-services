@@ -123,7 +123,7 @@ if (imageModal && modalImage && closeModal) {
 }
 
 // Dark Mode Toggle Logic
-document.addEventListener('DOMContentLoaded', () => {
+(function initDarkMode() {
     // Check saved theme or system preference immediately
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
         document.documentElement.classList.add('dark');
@@ -159,4 +159,4 @@ document.addEventListener('DOMContentLoaded', () => {
             icon.classList.add('fa-moon');
         }
     });
-});
+})();
