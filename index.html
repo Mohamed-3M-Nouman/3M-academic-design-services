@@ -36,6 +36,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -64,7 +65,7 @@
     </script>
 </head>
 
-<body class="selection:bg-primary selection:text-white flex flex-col min-h-screen">
+<body class="font-body selection:bg-primary selection:text-white flex flex-col min-h-screen">
 
     <!-- Navbar -->
     <nav
@@ -91,12 +92,19 @@
                         معنا</a>
                 </div>
 
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button"
-                        class="text-textDark hover:text-primary focus:outline-none transition-standard p-3 min-h-[44px] min-w-[44px] flex items-center justify-center">
-                        <i class="fas fa-bars text-2xl"></i>
+                <div class="flex items-center gap-2 md:gap-4">
+                    <!-- Dark Mode Toggle Button -->
+                    <button id="darkModeToggle" class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white transition-standard focus:outline-none shadow-sm" aria-label="تبديل الوضع">
+                        <i class="fas fa-moon text-lg"></i>
                     </button>
+
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-button"
+                            class="text-textDark hover:text-primary focus:outline-none transition-standard p-2 min-h-[44px] min-w-[44px] flex items-center justify-center">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -253,7 +261,7 @@
 
                 <!-- Service 4 -->
                 <div
-                    class="bg-white rounded-standard p-6 md:p-8 shadow-sm hover:shadow-hover border border-gray-100 transition-standard group relative overflow-hidden flex flex-col h-full lg:col-start-2 lg:col-span-1 md:col-span-1">
+                    class="bg-white rounded-standard p-6 md:p-8 shadow-sm hover:shadow-hover border border-gray-100 transition-standard group relative overflow-hidden flex flex-col h-full">
                     <div
                         class="absolute top-0 right-0 w-32 h-32 bg-purple-50 rounded-bl-full -mr-10 -mt-10 transition-standard group-hover:scale-110">
                     </div>
@@ -277,7 +285,7 @@
 
                 <!-- Service 5 -->
                 <div
-                    class="bg-white rounded-standard p-6 md:p-8 shadow-sm hover:shadow-hover border border-gray-100 transition-standard group relative overflow-hidden flex flex-col h-full lg:col-start-3 lg:col-span-1 md:col-span-2 md:w-1/2 md:mx-auto lg:w-full">
+                    class="bg-white rounded-standard p-6 md:p-8 shadow-sm hover:shadow-hover border border-gray-100 transition-standard group relative overflow-hidden flex flex-col h-full">
                     <div
                         class="absolute top-0 right-0 w-32 h-32 bg-rose-50 rounded-bl-full -mr-10 -mt-10 transition-standard group-hover:scale-110">
                     </div>
@@ -392,7 +400,7 @@
                     <img src="./logo.png" alt="3M Academic Design Logo" class="h-10 w-auto md:h-12" />
                 </div>
 
-                <div class="flex gap-4 md:gap-6">
+                <div class="flex gap-4 md:gap-6 items-center">
                     <a href="https://www.facebook.com/3mnal" target="_blank" rel="noopener noreferrer"
                         class="w-11 h-11 md:w-10 md:h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white transition-standard">
                         <i class="fab fa-facebook-f"></i>

@@ -36,6 +36,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            darkMode: 'class',
             theme: {
                 extend: {
                     colors: {
@@ -91,12 +92,19 @@
                         معنا</a>
                 </div>
 
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button"
-                        class="text-textDark hover:text-primary focus:outline-none transition-standard p-3 min-h-[44px] min-w-[44px] flex items-center justify-center">
-                        <i class="fas fa-bars text-2xl"></i>
+                <div class="flex items-center gap-2 md:gap-4">
+                    <!-- Dark Mode Toggle Button -->
+                    <button id="darkModeToggle" class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white transition-standard focus:outline-none shadow-sm" aria-label="تبديل الوضع">
+                        <i class="fas fa-moon text-lg"></i>
                     </button>
+
+                    <!-- Mobile menu button -->
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-button"
+                            class="text-textDark hover:text-primary focus:outline-none transition-standard p-2 min-h-[44px] min-w-[44px] flex items-center justify-center">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -148,7 +156,7 @@
                     <div class="slider-label label-after">رسم علمي دقيق وحديث</div>
                     
                     <!-- Before: Dusty old complex book drawing placeholder -->
-                    <img src="./img/illustrations before.png" alt="صورة مبهمة أو معقدة من كتاب قديم" class="img-before opacity-80 mix-blend-multiply">
+                    <img src="./img/illustrations before.png" alt="صورة مبهمة أو معقدة من كتاب قديم" class="img-before">
                     
                     <!-- After: Clear Scientific Modern Illustration Placeholder -->
                     <img src="./img/illustrations after.png" alt="رسم توضيحي علمي دقيق وحديث" class="img-after" id="afterImage">
@@ -298,7 +306,7 @@
                     <img src="./logo.png" alt="3M Academic Design Logo" class="h-10 w-auto md:h-12" />
                 </a>
 
-                <div class="flex gap-4 md:gap-6">
+                <div class="flex gap-4 md:gap-6 items-center">
                     <a href="https://www.facebook.com/3mnal" target="_blank" rel="noopener noreferrer"
                         class="w-11 h-11 md:w-10 md:h-10 rounded-full bg-gray-50 flex items-center justify-center text-gray-500 hover:bg-primary hover:text-white transition-standard">
                         <i class="fab fa-facebook-f"></i>

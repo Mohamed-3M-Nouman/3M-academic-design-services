@@ -160,3 +160,80 @@ h6 {
 
 .label-after { left: 20px; }
 .label-before { right: 20px; }
+
+/* --- Dark Mode Overrides --- */
+html.dark {
+    background-color: #0f172a;
+    color: #f8fafc;
+}
+html.dark body { 
+    background-color: #0f172a !important; 
+    color: #f8fafc !important; 
+}
+html.dark h1,
+html.dark h2,
+html.dark h3,
+html.dark h4,
+html.dark h5,
+html.dark h6 {
+    color: #f8fafc !important;
+}
+html.dark .bg-white { background-color: #1e293b !important; }
+html.dark .bg-bgLight { background-color: #0f172a !important; }
+html.dark .bg-gray-100 { background-color: #334155 !important; }
+html.dark .bg-gray-50 { background-color: #1e293b !important; }
+
+/* Improve brand colors for dark mode legibility */
+html.dark .text-primary { color: #60a5fa !important; } 
+html.dark .hover\:text-primary:hover { color: #93c5fd !important; }
+
+/* Invert the logo entirely to sleek white for a cleaner dark mode aesthetic */
+html.dark img[src*="logo"] {
+    filter: brightness(0) invert(1) opacity(0.95);
+}
+
+/* Make brand name text pure white in dark mode explicitly */
+html.dark nav span.text-primary,
+html.dark footer span.text-primary {
+    color: #ffffff !important;
+}
+
+html.dark .text-textDark { color: #f8fafc !important; }
+html.dark .text-textLight { color: #cbd5e1 !important; }
+html.dark .text-gray-500 { color: #cbd5e1 !important; }
+html.dark .text-gray-800 { color: #f8fafc !important; }
+html.dark .text-textDark { color: #f8fafc !important; }
+html.dark .text-textLight { color: #cbd5e1 !important; }
+html.dark .text-gray-500 { color: #cbd5e1 !important; }
+html.dark .text-gray-800 { color: #f8fafc !important; }
+html.dark .text-gray-900 { color: #f8fafc !important; }
+
+html.dark .border-gray-100 { border-color: #334155 !important; }
+html.dark .border-blue-100 { border-color: #0047AB !important; }
+
+html.dark .bg-blue-50 { background-color: rgba(96, 165, 250, 0.1) !important; text-shadow: none !important; }
+html.dark .bg-yellow-50 { background-color: rgba(255, 193, 7, 0.1) !important; text-shadow: none !important; }
+html.dark .bg-green-50 { background-color: rgba(34, 197, 94, 0.1) !important; text-shadow: none !important; }
+html.dark .bg-purple-50 { background-color: rgba(168, 85, 247, 0.1) !important; text-shadow: none !important; }
+html.dark .bg-rose-50 { background-color: rgba(244, 63, 94, 0.1) !important; text-shadow: none !important; }
+
+/* Re-enable group-hover animations that were blocked by !important overrides in dark mode */
+html.dark .group:hover .group-hover\:bg-primary { background-color: #0047AB !important; }
+html.dark .group:hover .group-hover\:bg-accent { background-color: #FFC107 !important; }
+html.dark .group:hover .group-hover\:bg-green-600 { background-color: #16a34a !important; }
+html.dark .group:hover .group-hover\:bg-purple-600 { background-color: #9333ea !important; }
+html.dark .group:hover .group-hover\:bg-rose-600 { background-color: #e11d48 !important; }
+html.dark .group:hover .group-hover\:text-white { color: #ffffff !important; }
+html.dark .group:hover .group-hover\:border-primary { border-color: #0047AB !important; }
+html.dark .group:hover .group-hover\:border-accent { border-color: #FFC107 !important; }
+html.dark .group:hover .group-hover\:border-green-600 { border-color: #16a34a !important; }
+html.dark .group:hover .group-hover\:border-purple-600 { border-color: #9333ea !important; }
+html.dark .group:hover .group-hover\:border-rose-600 { border-color: #e11d48 !important; }
+
+html.dark .bg-white\/90 { background-color: rgba(30, 41, 59, 0.95) !important; }
+html.dark .bg-white\/95 { background-color: rgba(30, 41, 59, 0.98) !important; }
+
+html.dark footer { background-color: #1e293b !important; border-top-color: #334155 !important; border-bottom-color: transparent !important; }
+
+html.dark .slider-container { background-color: #334155 !important; }
+html.dark .custom-shape-divider-bottom .shape-fill { fill: #0f172a !important; }
